@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed May 15 23:24:31 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-016a-bf50-496c-00000f608b70 
+on database directory D:\Eclipse\assignment3\assignment3 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc 
+Loaded from file:/C:/Users/Shangyu/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.2+9-LTS
+user.dir=D:\Eclipse\assignment3
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
