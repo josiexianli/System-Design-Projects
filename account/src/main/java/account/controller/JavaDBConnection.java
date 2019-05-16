@@ -6,15 +6,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class JavaDBConnection {
-	private static final String JDBC_URL = "jdbc:derby:account;create=true";
+	private static final String JDBC_URL = "jdbc:derby://localhost:80/account;create=true";
 	
 	Connection conn = null;
 	Statement stmt = null;
 	
 	public JavaDBConnection() {
 		try {
-			DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
+			DriverManager.registerDriver(new org.apache.derby.jdbc.ClientDriver());
 			this.conn = DriverManager.getConnection(JDBC_URL);
+			
 			if (this.conn != null) {
 				System.out.println("You are in");
 			}
@@ -61,6 +62,7 @@ public class JavaDBConnection {
         {
             stmt = conn.createStatement();
             stmt.execute("create table Accounts (accountId int not null primary key generated always as identity, user_name varchar(50) not null, password varchar(50) not null, email varchar(50), userType int)");
+       
             stmt.close();
         }
         catch (SQLException sqlExcept)

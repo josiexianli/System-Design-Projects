@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-An account has been created for :
+An account has been created for : 
 
 username: ${account.username}
 email: ${account.email}
