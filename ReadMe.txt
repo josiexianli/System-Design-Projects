@@ -1,0 +1,1 @@
+Please run JavaDBConnection.java first to create database and load it with simple data, then the tests will pass.
