@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class JavaDBConnection {
-	private static final String JDBC_URL = "jdbc:derby://localhost:80/account;create=true";
+	private static final String JDBC_URL = "jdbc:derby://localhost:1527/account;create=true";
 	
 	Connection conn = null;
 	Statement stmt = null;
