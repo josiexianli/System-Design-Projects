@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"> 
+		
+	<bean id="HessianTransactionServiceStub" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:1527/remoting/spring/HessianTransactionService"/>
+		<property name="serviceInterface" value="remoting.TransactionScriptInterface"/>
+	</bean>
+	
+	<bean id="BurlapTransactionServiceStub" class="org.springframework.remoting.caucho.BurlapProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:1527/remoting/spring/BurlapTransactionService"/>
+		<property name="serviceInterface" value="remoting.TransactionScriptInterface"/>
+	</bean>
+	
+	<bean id="HttpInvokerTransactionServiceStub" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:1527/remoting/spring/HttpInvokerTransactionService"/>
+		<property name="serviceInterface" value="remoting.TransactionScriptInterface"/>
+	</bean>
+ 
+</beans>

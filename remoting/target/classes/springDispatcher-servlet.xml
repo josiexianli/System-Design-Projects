@@ -1,0 +1,18 @@
+<beans>
+	<bean id="transactionService" class="xianli.assignment7.TransactionScript"/>
+	
+	<bean name="/HessianTransactionService" class="org.springframework.remoting.caucho.HessianServiceExporter">
+		<property name="service" ref="transactionService"/>
+		<property name="serviceInterface" value="remoting.TransactionScriptInterface"/>
+	</bean>
+	
+	<bean name="/BurlapTransactionService" class="org.springframework.remoting.caucho.BurlapServiceExporter">
+		<property name="service" ref="transactionService"/>
+		<property name="serviceInterface" value="remoting.TransactionScriptInterface"/>
+	</bean>
+	
+	<bean name="/HttpInvokerTransactionService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service" ref="transactionService"/>
+		<property name="serviceInterface" value="remoting.TransactionScriptInterface"/>
+	</bean>
+</beans>
